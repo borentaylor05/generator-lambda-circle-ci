@@ -1,6 +1,6 @@
 {
   "name": "generator-lambda-circle-ci",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generates simple lambda project w/ built testing, deployment scripts and  CI/CD via CircleCI",
   "author": {
     "name": "Taylor Boren",
