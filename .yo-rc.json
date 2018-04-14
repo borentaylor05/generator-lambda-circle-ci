@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Taylor Boren",
+      "authorEmail": "taylorboren86@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}

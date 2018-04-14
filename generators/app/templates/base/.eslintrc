@@ -1,0 +1,32 @@
+{
+    "env": {
+        "amd": true
+    },
+    "globals": {
+        "before": true,
+        "beforeEach": true,
+        "Buffer": true,
+        "console": true,
+        "describe": true,
+        "it": true,
+        "exports": true,
+        "module": true,
+        "process": true,
+        "Promise": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "experimentalObjectRestSpread": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "rules": {
+        "class-methods-use-this": [0],
+        "indent": ["error", 4],
+        "comma-dangle": [0],
+        "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+        "semi": ["error", "always"]
+    }
+}

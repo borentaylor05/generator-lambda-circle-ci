@@ -1,0 +1,39 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "Base for a node API Gateway lambda using CircleCI for CI/CD",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf node_modules <%= name %>.zip",
+    "test:coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha lib/tests/**/*.test.js",
+    "server": "node dev/server.js",
+    "start": "npm run server",
+    "test:linter": "eslint *.js ./**/*.js",
+    "test:unit": "mocha lib/tests/**/*.test.js",
+    "test:integration": "mocha tests/integration/**/*.test.js",
+    "test": "npm run test:linter && npm run test:coverage && npm run test:integration",
+    "function:create": "npm run zip && npm i --save-dev aws-sdk && node ./scripts/create-function.js",
+    "function:update:dev": "npm run zip && npm i --save-dev aws-sdk && node ./scripts/update-function-dev.js",
+    "function:update:stage": "npm run zip && npm i --save-dev aws-sdk && node ./scripts/update-function-stage.js",
+    "zip": "npm run clean && npm i --production && zip <%=  name %>.zip *.js node_modules"
+  },
+  "keywords": [
+    "lambda",
+    "node",
+    "circl-ci"
+  ],
+  "author": "Taylor Boren",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.224.1",
+    "babel-eslint": "^8.2.2",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "express": "^4.16.3",
+    "frisby": "^2.0.15",
+    "istanbul": "^0.4.5",
+    "jest": "^22.4.3",
+    "mocha": "^5.1.0"
+  }
+}
