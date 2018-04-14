@@ -60,7 +60,7 @@ fs.readFile(`${functionName}.zip`, function (err, data) {
     lambda.createFunction(params, function(err, data) {
         if (err) return console.info(err, err.stack);
 
-        console.info(`Function ${functionName} created!`);
+        console.info(`Function created: ${functionName}`);
 
         createAliases(functionName, data.Version);
     });
