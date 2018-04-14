@@ -13,6 +13,7 @@
     "test:integration": "mocha tests/integration/**/*.test.js",
     "test": "npm run test:linter && npm run test:coverage && npm run test:integration",
     "function:create": "npm run zip && npm i --save-dev aws-sdk && node ./scripts/create-function.js",
+    "function:promote:prod": "node ./scripts/promote-function-prod.js",
     "function:update:dev": "npm run zip && npm i --save-dev aws-sdk && node ./scripts/update-function-dev.js",
     "function:update:stage": "npm run zip && npm i --save-dev aws-sdk && node ./scripts/update-function-stage.js",
     "zip": "npm run clean && npm i --production && zip <%=  name %>.zip *.js node_modules"
