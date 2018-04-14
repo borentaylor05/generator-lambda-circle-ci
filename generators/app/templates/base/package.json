@@ -16,7 +16,7 @@
     "function:promote:prod": "node ./scripts/promote-function-prod.js",
     "function:update:dev": "npm run zip && npm i --save-dev aws-sdk && node ./scripts/update-function-dev.js",
     "function:update:stage": "npm run zip && npm i --save-dev aws-sdk && node ./scripts/update-function-stage.js",
-    "zip": "npm run clean && npm i --production && zip <%=  name %>.zip *.js node_modules"
+    "zip": "npm run clean && npm i --production && zip -r <%=  name %>.zip *.js lib node_modules"
   },
   "keywords": [
     "lambda",
