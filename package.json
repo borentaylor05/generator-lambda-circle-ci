@@ -1,11 +1,10 @@
 {
-  "name": "generator-lambda-circleci",
-  "version": "0.0.0",
+  "name": "generator-lambda-circle-ci",
+  "version": "1.0.0",
   "description": "Generates simple lambda project w/ built testing, deployment scripts and  CI/CD via CircleCI",
   "author": {
     "name": "Taylor Boren",
-    "email": "taylorboren86@gmail.com",
-    "url": ""
+    "email": "taylorboren86@gmail.com"
   },
   "files": [
     "generators"
@@ -81,6 +80,6 @@
       "prettier"
     ]
   },
-  "repository": "borentaylor05/generator-lambda-circle-ci",
+  "repository": "https://github.com/borentaylor05/generator-lambda-circle-ci",
   "license": "MIT"
 }
